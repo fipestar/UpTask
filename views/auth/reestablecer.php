@@ -8,7 +8,7 @@
 
         <?php if ($mostrar){ ?>
 
-        <form method="POST" action="/reestablecer" class="formulario">
+        <form method="POST" class="formulario">
 
         <div class="campo">
                 <label for="password">Password</label>

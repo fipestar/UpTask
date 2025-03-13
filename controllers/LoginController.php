@@ -7,19 +7,57 @@ use Model\Usuario;
 
 class LoginController {
     public static function login(Router $router) {
-
-        if($_SERVER['REQUEST_METHOD'] === 'POST'){
-
+        $alertas = [];
+    
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $usuario = new Usuario($_POST);
+    
+            $alertas = $usuario->validarLogin();
+    
+            if (empty($alertas)) {
+                // Verificar si el usuario existe
+                $usuario = Usuario::where('email', $usuario->email);
+    
+                if (!$usuario || !$usuario->confirmado) {
+                    Usuario::setAlerta('error', 'El usuario no existe o no está confirmado');
+                } else {
+                    // Verificar contraseña
+                    if (password_verify($_POST['password'], $usuario->password)) {
+                        // Iniciar la sesión
+                        session_start();
+                        
+                        // Llenar el arreglo de sesión
+                        $_SESSION['id'] = $usuario->id;
+                        $_SESSION['nombre'] = $usuario->nombre;
+                        $_SESSION['email'] = $usuario->email;
+                        $_SESSION['login'] = true;
+    
+                        // Redireccionar
+                        header('Location: /dashboard');
+                        exit(); // Importante para detener la ejecución
+                    } else {
+                        Usuario::setAlerta('error', 'El password es incorrecto');
+                    }
+                }
+            }
         }
-
-        //Render a la vista
+    
+        // Obtener alertas actualizadas
+        $alertas = Usuario::getAlertas();
+    
+        // Renderizar la vista
         $router->render('auth/login', [
-            'titulo' => 'Iniciar Sesion'
+            'titulo' => 'Iniciar Sesión',
+            'alertas' => $alertas
         ]);
     }
+    
+    
 
     public static function logout() {
-        echo "Desde login";     
+        session_start();
+        $_SESSION = [];
+        header('Location: /');    
     }
 
     public static function crear(Router $router) {
@@ -124,7 +162,23 @@ class LoginController {
             $mostrar = false;
         }
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            //Añadi el nuevo password
+            $usuario->sincronizar($_POST);
 
+            //Validar el password
+            $alertas = $usuario->validarPassword();
+
+            if(empty($alertas)){
+                //Hashear el password 
+                $usuario->hashPassword();
+                //Eliminar el token
+                $usuario->token = null;
+                //Guardar el usuario en la BD
+                $resultado = $usuario->guardar();
+                //Redireccionar
+                if($resultado){
+                    header('Location: /');
+            }
         }
 
         $alertas = Usuario::getAlertas();
@@ -136,8 +190,10 @@ class LoginController {
             'mostrar' => $mostrar
         ]);
     }
+}
 
     public static function mensaje(Router $router) {
+        
         $router->render('auth/mensaje',[
             'titulo' => 'Cuenta Creada Exitosamente'
         ]);

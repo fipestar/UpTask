@@ -30,5 +30,9 @@ $router->get('/confirmar', [new LoginController(), 'confirmar']);
 
 //Zona de proyectos
 $router->get('/dashboard', [new DashboardController(), 'index']);
+$router->get('/crear-proyecto', [new DashboardController(), 'crear_proyecto']);
+$router->post('/crear-proyecto', [new DashboardController(), 'crear_proyecto']);
+$router->get('/perfil', [new DashboardController(), 'perfil']);
+$router->get('/proyecto', [new DashboardController(), 'proyecto']);
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

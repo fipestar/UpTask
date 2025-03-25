@@ -11,10 +11,12 @@
     label {
         flex: 0 0 10rem;
     }
-    input{
-        flex: 1;
-        padding: 1rem;
-        border: none;
-        background-color: lighten(v.$gris, 40%);
-    }
+}
+.campo input[type="email"],
+.campo input[type="text"],
+.campo input[type="password"] {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    background-color: lighten(v.$gris, 40%);
 }

@@ -1,72 +1,54 @@
-✅ UpTask - Administrador de Proyectos con Tareas
+# ✅ UpTask - Administrador de Proyectos y Tareas
 
+![PHP](https://img.shields.io/badge/PHP-8.0%2B-blue)  
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange)  
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)  
+![Sass](https://img.shields.io/badge/Sass-SCSS%20Preprocessor-pink)  
 
+UpTask es una plataforma web que permite gestionar proyectos y tareas de forma eficiente. Pensada para equipos o individuos que deseen organizar sus actividades con control total, autenticación segura y una interfaz intuitiva.
 
+---
 
+## 🚀 Características Principales
 
+✅ **Autenticación y Seguridad**
+- Registro de usuarios con verificación de cuenta vía email (PHPMailer).
+- Inicio de sesión, recuperación y restablecimiento de contraseña.
+- Acceso protegido mediante sesiones y validación de rutas.
 
-Aplicación web para gestionar proyectos y tareas. Los usuarios pueden crear cuentas, iniciar sesión, crear proyectos y agregar tareas de forma intuitiva desde un panel privado. Ideal para freelancers o pequeños equipos que quieran llevar el control de sus pendientes.
+✅ **Gestión de Proyectos y Tareas**
+- Creación de proyectos y asignación de tareas.
+- Modales con animaciones para agregar tareas sin recargar la página.
+- Cambio de estado (completado/incompleto), edición y eliminación de tareas.
 
-🚀 Características Principales
+✅ **Interfaz Dinámica con JavaScript**
+- Interacción en tiempo real usando `Fetch API`.
+- Interfaz tipo SPA mediante manipulación del DOM.
+- Modo oscuro automático según la preferencia del sistema.
 
-✅ Autenticación y Seguridad
+✅ **Panel Personalizado**
+- Vista de Dashboard protegida para cada usuario.
+- Edición del perfil de usuario (nombre, email, contraseña).
+- Validaciones personalizadas y alertas visuales.
 
-Registro de usuarios con confirmación por correo (PHPMailer).
+---
 
-Login, recuperación y cambio de contraseña.
+## 🛠️ Tecnologías Utilizadas
 
-Validaciones y alertas dinámicas.
+| Tecnología      | Descripción                                               |
+|------------------|-----------------------------------------------------------|
+| **PHP (POO & MVC)** | Lógica backend, autenticación, enrutamiento y vistas     |
+| **MySQL**         | Base de datos relacional para usuarios, proyectos y tareas |
+| **SCSS**          | Preprocesador CSS modular para diseño responsive y temático |
+| **JavaScript ES6**| Interacciones del usuario, consumo de API, animaciones   |
+| **PHPMailer**     | Envío de correos para confirmaciones y recuperación      |
+| **Gulp**          | Automatización de tareas como compilación de SCSS        |
 
-✅ Gestión de Proyectos y Tareas
+---
 
-Creación, edición y eliminación de proyectos.
+![image](https://github.com/user-attachments/assets/0c3c2291-2435-42be-a056-71871b2b7236)
+![image](https://github.com/user-attachments/assets/ea0cd060-0bee-4d9a-be95-eaf2fb00d509)
+![image](https://github.com/user-attachments/assets/dbe7dc4d-cf18-4745-bc26-6235fffc7283)
+![image](https://github.com/user-attachments/assets/7a96b8f7-4408-4979-b9f7-4919b91e7191)
 
-Modal para agregar, editar y eliminar tareas.
-
-Cambio de estado de tareas (completado o pendiente).
-
-✅ Panel de Usuario Protegido
-
-Vista personalizada para cada usuario con sus proyectos.
-
-Visualización de tareas por proyecto.
-
-Interfaz moderna y responsiva con modo oscuro incluido.
-
-✅ API REST y Frontend Dinámico
-
-Uso de Fetch API para peticiones sin recargar la página.
-
-Virtual DOM para renderizado dinámico de tareas.
-
-SCSS modular para mantener estilos limpios y reutilizables.
-
-🛠️ Tecnologías Utilizadas
-
-Tecnología
-
-Descripción
-
-PHP (POO + MVC)
-
-Backend y lógica del proyecto
-
-MySQL
-
-Base de datos relacional
-
-JavaScript (ES6)
-
-Interacción del usuario y consumo de la API
-
-Sass (SCSS)
-
-Estilizado modular y modo oscuro
-
-Fetch API
-
-Comunicación frontend-backend
-
-PHPMailer
-
-Confirmación de cuentas y recuperación de contraseña
+![image](https://github.com/user-attachments/assets/60f4afa9-fb61-4d6c-9fd6-7b5788cf5d34)

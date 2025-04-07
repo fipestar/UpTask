@@ -35,6 +35,9 @@ $router->get('/dashboard', [new DashboardController(), 'index']);
 $router->get('/crear-proyecto', [new DashboardController(), 'crear_proyecto']);
 $router->post('/crear-proyecto', [new DashboardController(), 'crear_proyecto']);
 $router->get('/perfil', [new DashboardController(), 'perfil']);
+$router->post('/perfil', [new DashboardController(), 'perfil']);
+$router->get('/cambiar-password', [new DashboardController(), 'cambiar_password']);
+$router->post('/cambiar-password', [new DashboardController(), 'cambiar_password']);
 $router->get('/proyecto', [new DashboardController(), 'proyecto']);
 
 //Api para las tareas

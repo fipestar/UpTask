@@ -1,48 +1,72 @@
-🧠 UpTask - Administrador de Proyectos con Tareas
-UpTask es una aplicación web fullstack desarrollada con PHP, JavaScript, SCSS y MySQL. Permite a los usuarios gestionar sus proyectos y tareas de manera intuitiva, con autenticación de usuarios, vistas protegidas y una experiencia interactiva sin recargas de página.
+✅ UpTask - Administrador de Proyectos con Tareas
 
-🚀 Funcionalidades principales
-✅ Registro, login y recuperación de contraseña con validaciones y seguridad.
 
-🔒 Vistas protegidas mediante autenticación de sesiones.
 
-📁 Creación, edición y eliminación de proyectos.
 
-📝 Gestión completa de tareas:
 
-Añadir, editar, completar y eliminar tareas.
 
-Sin recarga de página usando Fetch API y Virtual DOM.
+Aplicación web para gestionar proyectos y tareas. Los usuarios pueden crear cuentas, iniciar sesión, crear proyectos y agregar tareas de forma intuitiva desde un panel privado. Ideal para freelancers o pequeños equipos que quieran llevar el control de sus pendientes.
 
-🎨 Estilos personalizados con SCSS y Dark Mode automático.
+🚀 Características Principales
 
-🧩 Validación de formularios con alertas amigables.
+✅ Autenticación y Seguridad
 
-👤 Sección de perfil de usuario (editar datos y cambiar contraseña).
+Registro de usuarios con confirmación por correo (PHPMailer).
 
-⚙️ Tecnologías utilizadas
-Backend: PHP con MVC personalizado
+Login, recuperación y cambio de contraseña.
 
-Frontend: HTML5, JavaScript (ES6), Fetch API
+Validaciones y alertas dinámicas.
 
-Estilos: SCSS + Gulp
+✅ Gestión de Proyectos y Tareas
 
-Base de Datos: MySQL
+Creación, edición y eliminación de proyectos.
 
-Extras: Dark Mode, Virtual DOM manual, validaciones en frontend y backend
-📷 Vista previa
-![image](https://github.com/user-attachments/assets/bf116817-89cd-435c-9cb3-b2e8d8b6e068)
-![image](https://github.com/user-attachments/assets/096b9508-ae10-46ea-9ec5-6b38b9750c0d)
-![image](https://github.com/user-attachments/assets/8b221c11-0adb-4ea6-9de8-0463530758fe)
-![image](https://github.com/user-attachments/assets/87b6ed44-2413-4446-98f9-15b86d976c24)
-![image](https://github.com/user-attachments/assets/feb970c1-4ae1-43d8-9c1a-f1382f374141)
+Modal para agregar, editar y eliminar tareas.
 
-📂 Estructura del proyecto
-bash
-Copiar
-Editar
-/controllers     # Controladores del proyecto
-/models          # Modelos de base de datos
-/views           # Vistas de frontend (HTML + PHP)
-/public          # Archivos públicos (CSS, JS, imágenes)
-/scss            # Estilos en SCSS
+Cambio de estado de tareas (completado o pendiente).
+
+✅ Panel de Usuario Protegido
+
+Vista personalizada para cada usuario con sus proyectos.
+
+Visualización de tareas por proyecto.
+
+Interfaz moderna y responsiva con modo oscuro incluido.
+
+✅ API REST y Frontend Dinámico
+
+Uso de Fetch API para peticiones sin recargar la página.
+
+Virtual DOM para renderizado dinámico de tareas.
+
+SCSS modular para mantener estilos limpios y reutilizables.
+
+🛠️ Tecnologías Utilizadas
+
+Tecnología
+
+Descripción
+
+PHP (POO + MVC)
+
+Backend y lógica del proyecto
+
+MySQL
+
+Base de datos relacional
+
+JavaScript (ES6)
+
+Interacción del usuario y consumo de la API
+
+Sass (SCSS)
+
+Estilizado modular y modo oscuro
+
+Fetch API
+
+Comunicación frontend-backend
+
+PHPMailer
+
+Confirmación de cuentas y recuperación de contraseña
